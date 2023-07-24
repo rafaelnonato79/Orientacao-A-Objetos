@@ -37,7 +37,7 @@ export class Carro{
             this.estado == false;
             this.velocidade = 0;
         }else{
-            console.log(`Não é possivel desligar o carro`);
+            console.log(`Não é possível desligar o carro com velocidade acima de 20km/h`);
         }
     }
 

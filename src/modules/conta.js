@@ -34,7 +34,7 @@ export class Conta {
     }
 
     get titular(){
-        return this.#titular.toUpperCase();
+        return this.#titular
     }
 
     set titular(novoTitular){
@@ -73,6 +73,10 @@ export class Conta {
         
         }
         return(false);
+    }
+
+    toString(){
+        return `Agência: ${this.agencia}\nConta:${this.numero} \nTitular: ${this.titular.nome} \nSaldo: ${this.saldo.toFixed(2)}`
     }
 
 }

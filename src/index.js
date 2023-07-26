@@ -1,14 +1,21 @@
 
 import { ContaCorrente } from './modules/conta-corrente.js';
 import {Conta} from './modules/conta.js';
+import { Pessoa } from './modules/pessoa.js';
+import { ContaPopanca } from './modules/contapoupanca.js';
 
-const contaTiago = new Conta(123, 123456, "Tiago");
-contaTiago.depositar(1000);
+const ramon = new Pessoa("Ramon","123456789",39,"M");
+const contaRamon = new ContaCorrente(123,123,ramon);
 
-const contaMarcos = new ContaCorrente(123, 111111, "Marcos");
-contaMarcos.depositar(1000);
+const mauricio = new Pessoa("Mauricio", "987654321",35,"M");
+const contaMauricio = new ContaPopanca(412, 36, mauricio);
 
-contaMarcos.transferir(contaTiago, 500);
+contaRamon.depositar(3000);
+contaMauricio.depositar(2500);
 
-console.log(contaTiago);
-console.log(contaMarcos);
+contaRamon.transferir(contaMauricio, 1000);
+
+
+//window.alert(contaRamon);
+console.log(contaRamon);
+console.log(contaMauricio);

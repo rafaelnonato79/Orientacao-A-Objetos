@@ -1,8 +1,8 @@
 
-import { ContaCorrente } from './modules/conta-corrente.js';
-import {Conta} from './modules/conta.js';
-import { Pessoa } from './modules/pessoa.js';
-import { ContaPopanca } from './modules/contapoupanca.js';
+import { ContaCorrente } from './conta-corrente.js';
+import {Conta} from './conta.js';
+import { Pessoa } from './pessoa.js';
+import { ContaPopanca } from './contapoupanca.js';
 
 const ramon = new Pessoa("Ramon","123456789",39,"M");
 const contaRamon = new ContaCorrente(123,123,ramon);

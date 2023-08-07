@@ -1,4 +1,4 @@
-import { Pessoa } from "./pessoa";
+import { Pessoa } from "./pessoa.js";
 
 // Criar um modelo de conta bancária
 export abstract class Conta {
@@ -23,27 +23,24 @@ export abstract class Conta {
         return this._agencia;
     }
 
-    set agencia(novaAgencia: number) {
-        this._agencia = novaAgencia;
+    set agencia(agencia: number) {
+        this._agencia = agencia;
     }
 
     get numero(): number{
         return this._numero;
     }
 
-    set numero(novoNumero: number){
-        this._numero = novoNumero;
+    set numero(numero: number){
+        this._numero = numero;
     }
 
     get titular(): Pessoa {
         return this._titular
     }
 
-    set titular(novoTitular: Pessoa){
-        if(novoTitular === null){
-            throw new Error("Titular não pode estar em branco");
-        }
-        this._titular = novoTitular;
+    set titular(titular: Pessoa){
+        this._titular = titular;
     }
 
     get saldo(): number{
@@ -67,17 +64,12 @@ export abstract class Conta {
         }
     return false;
     }
-
     transferir(contaDestino: Conta, valor: number){
         const podeTransferir = this.sacar(valor);
         if(podeTransferir){
-            return contaDestino.depositar(valor);
-        
+            return contaDestino.depositar(valor);   
         }
         return(false);
     }
 
-    toString(){
-        return `Agência: ${this._agencia}\nConta:${this._numero} \nTitular: ${this.titular.getNome} \nSaldo: ${this._saldo.toFixed(2)}`
-    }
 }

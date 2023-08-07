@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist/js",
-    "target": "es6"
+    "target": "ES2022",
+    "outDir": ".\\dist\\js",
+    "noEmitOnError": true
   },
-  "include": ["src/**/*"]
+  "include": [
+    ".\\src\\**\\*"
+  ]
 }

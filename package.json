@@ -1,8 +1,9 @@
 {
   "dependencies": {
     "typescript": "^5.1.6"
-  }
+  },
   "scripts": {
-    "compiler": ".\\node_modules\\.bin\\tsc"
-  }
+     "compile": ".\\node_modules\\.bin\\tsc"
+   }
 }
+

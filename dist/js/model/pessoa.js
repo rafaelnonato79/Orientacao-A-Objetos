@@ -1,30 +1,39 @@
 export class Pessoa {
-    nome;
-    cpf;
-    idade;
-    sexo;
-    // atributos e construtor
+    // atributos
+    _nome;
+    _cpf;
+    _idade;
+    _sexo;
+    //construtor
     constructor(nome, cpf, idade, sexo) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.sexo = sexo;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.idade = idade;
-        this.sexo = sexo;
+        this._nome = nome;
+        this._cpf = cpf;
+        this._idade = idade;
+        this._sexo = sexo;
     }
     // metodos
-    getNome() {
-        return this.nome;
+    get nome() {
+        return this._nome;
     }
-    getCpf() {
-        return this.cpf;
+    set nome(nome) {
+        this._nome = nome.toUpperCase().trim();
     }
-    getIdade() {
-        return this.idade;
+    get cpf() {
+        return this._cpf;
     }
-    getSexo() {
-        return this.sexo;
+    set cpf(cpf) {
+        this._cpf = cpf;
+    }
+    get idade() {
+        return this._idade;
+    }
+    set idade(idade) {
+        this._idade = idade;
+    }
+    get sexo() {
+        return this._sexo;
+    }
+    set sexo(sexo) {
+        this._sexo = sexo;
     }
 }

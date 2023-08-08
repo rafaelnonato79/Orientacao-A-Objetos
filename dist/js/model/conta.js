@@ -15,23 +15,20 @@ export class Conta {
     get agencia() {
         return this._agencia;
     }
-    set agencia(novaAgencia) {
-        this._agencia = novaAgencia;
+    set agencia(agencia) {
+        this._agencia = agencia;
     }
     get numero() {
         return this._numero;
     }
-    set numero(novoNumero) {
-        this._numero = novoNumero;
+    set numero(numero) {
+        this._numero = numero;
     }
     get titular() {
         return this._titular;
     }
-    set titular(novoTitular) {
-        if (novoTitular === null) {
-            throw new Error("Titular não pode estar em branco");
-        }
-        this._titular = novoTitular;
+    set titular(titular) {
+        this._titular = titular;
     }
     get saldo() {
         return this._saldo;
@@ -58,8 +55,5 @@ export class Conta {
             return contaDestino.depositar(valor);
         }
         return (false);
-    }
-    toString() {
-        return `Agência: ${this._agencia}\nConta:${this._numero} \nTitular: ${this.titular.getNome} \nSaldo: ${this._saldo.toFixed(2)}`;
     }
 }

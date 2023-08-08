@@ -1,3 +1,4 @@
+
 export class Pessoa{
 
     // atributos
@@ -14,7 +15,7 @@ export class Pessoa{
         this._idade = idade;
         this._sexo = sexo;
     }
-
+   
     // metodos
     get nome(): string {
         return this._nome;
@@ -33,7 +34,7 @@ export class Pessoa{
     get idade():number {
         return this._idade
     }
-    set idade(idade=number){
+    set idade(idade:number){
         this._idade = idade;
     }
     get sexo():string{
